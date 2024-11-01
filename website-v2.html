@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="website-v2.css">
+    <title>Juman's Recipes</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.js"></script>
+    
+</head>
+<body>
+
+<!-- HORIZONTAL MENUS UNDER HERE-->
+
+    <div class="horizontal_menu">
+        <ul>
+           <li> <a href="#">FEEDBACK</a></li>
+           <li> <a href="#">RECIPES</a></li>
+           <li> <a href="#">PLAN</a></li>
+        </ul>
+
+  
+      <a href="website-v2.html"><img id="logo" src="websitelogo.png" alt="logo">
+      </a>
+    <p style="font-size: 15px; margin-left: 15px; color: #034c52"> all recipes are approved by mama </p> 
+     
+     </div>
+
+<!-- BUTTONS MENUS UNDER HERE-->
+
+     <div class="buttons-menu">
+        <button onclick="showMenu('mena-menu')"> Middle Eastern Dishes</button>
+        <button onclick="showMenu('onePot')"> One Pot Dishes</button>
+        <button onclick="showMenu('dessert')"> Desserts</button>
+     </div>
+
+<!-- FOOD MENUS UNDER HERE-->
+
+
+     <div class="food-menus" id="mena-menu">
+
+        <div class="food-pair"> <!-- every pair of arabic and english names need to be together-->
+                <span>مفركة فطر</span> <br>
+                <span class="foodname">Mushroom and Ground Beef</span>
+        </div>
+
+        <div class="food-pair">
+           
+                <span class="arabic">جاج بحمض و توم</span> <br>
+                <span class="foodname">Lemon Garlic Chicken in the oven</span>
+         
+        </div>
+
+        <div class="food-pair">
+          
+                <span class="arabic">جاج و كوسة بالكريمة</span> <br>
+                <span class="foodname">Creamy Chicken and Zucchini</span>
+         
+        </div>
+
+        <div class="food-pair">
+            
+                <span class="arabic">كواج</span> <br>
+                <span class="foodname">Meatball and Potato Stew</span>
+            
+        </div>
+
+        <div class="food-pair">
+           
+                <span class="arabic">بزالية و رز</span> <br>
+                <span class="foodname"> Pea Stew</span>
+           
+        </div>
+
+        <div class="food-pair">
+                <span class="arabic">رز بالفول</span> <br>
+                <span class="foodname"> Rice and Fava Beans</span>
+        </div>
+
+        <div class="food-pair"> عن قريب <br> COMING SOON </div>
+     </div>
+
+
+    <div class="food-menus" id="onePot">
+        <div class="food-pair" class="foodname"> Baked Salmon </div>
+
+        <div class="food-pair" class="foodname"> Baked Layered Potatoes </div>
+
+        <div class="food-pair" class="foodname"> Pesto Pasta </div>
+    </div>
+
+
+    <div class="food-menus" id="dessert">
+        <!-- content for Desserts -->
+
+        <div class="food-pair" class="foodname"> Tiramisu </div>
+
+        <div class="food-pair" class="foodname"> Lazy Cake </div>
+
+    </div>
+    
+<!--RECIPES UNDER HERE-->
+
+<div id="recipe">
+    <h1 id="name"></h1>
+    <div>
+        <h3>Ingredients</h3>
+        <ul id="ingredients"></ul>
+    </div>
+    <div>
+        <h3>Instructions</h3>
+        <ol id="instructions"></ol>
+    </div>
+    <p id="servingsize">Serving size: <span id="size"></span> </p>
+</div>
+
+<script src="website-v2.js"></script>
+</body>
+</html>

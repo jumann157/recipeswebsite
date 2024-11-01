@@ -1,0 +1,45 @@
+{
+    "recipes": [
+        {
+            "name": "Mushroom and Ground Beef",
+            "ingredients" : [
+                {"ingredient": "Mushrooms", "quantity": "1 box"},
+                {"ingredient": "Ground beef", "quantity": "250g"},
+                {"ingredient": "White onion", "quantity": "1"}
+            ],
+            "instructions": [
+                "Wash and dice the onions into small pieces",
+                "Add olive oil and cook the onion on medium-low heat. (if the ground beef is frozen cook it first on low)",
+                "Once the onions have softened, add the ground beef",
+                "While the ground beef is cooking, wash and chop the mushrooms into decent-sized cubes",
+                "Season with salt and lots of pepper",
+                "Once the ground beef is fully cooked, add the mushrooms",
+                "Put the lid on and cook it medium for 10 min",
+                "Serve with rice or bread and enjoy :)"
+            ],
+            "Serving size": "2-3"
+        },
+        {
+            "name": "Lemon Garlic Chicken in the oven",
+            "ingredients" : [
+                {"ingredient": "Chicken", "quantity": "500g"},
+                {"ingredient": "Red onions", "quantity": "2"},
+                {"ingredient": "Lemons", "quantity": "2"},
+                {"ingredient": "Garlic cloves", "quantity": "3"},
+                {"ingredient": "Potatoes", "quantity": "4"}
+            ],
+            "instructions": [
+                "Preheat the oven to 160ºC",
+                "Wash and slice the onions",
+                "Wash and cut the potatoes into big cubes",
+                "Wash the chicken and place it in a Pyrex",
+                "Add the onions and potatoes to the Pyrex",
+                "Season with salt and pepper",
+                "Add the garlic",
+                "Place in the oven for 30min",
+                "Enjoy :) brush your teeth after"
+            ],
+            "Serving size": "3-4"
+        }
+    ]
+}
