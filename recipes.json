@@ -40,6 +40,25 @@
                 "Enjoy :) brush your teeth after"
             ],
             "Serving size": "3-4"
+        },
+        {
+            "name": "Pesto Pasta",
+            "ingredients" : [
+                {"ingredient": "Pasta", "quantity": "whatever looks right"},
+                {"ingredient": "Pesto", "quantity": "whatever tastes right"},
+                {"ingredient": "Cherry tomatoes", "quantity": "a handful"},
+                {"ingredient": "Cooking cream (optional)", "quantity": "a tablespoon?"}
+            ],
+            "instructions": [
+                "Boil pasta (add oil and a lot salt)",
+                "Save some of the pasta water and drain the rest",
+                "Put the pasta in a bowl",
+                "Cook the cherry tomatoes for medium-high for 15min (until they get soft)",
+                "Add the cooking cream and pesto",
+                "Add the pasta",
+                "Enjoy :)"
+            ],
+            "Serving size": "Depends on how much you can handle at the time. 2 - 3"
         }
     ]
 }
