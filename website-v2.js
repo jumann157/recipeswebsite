@@ -3,44 +3,54 @@
     function getRecipe(name, data) {
         var selectedRecipe;
     
+    
         for(var i =0; i < data.recipes.length; i++ ) {
             if(data.recipes[i].name === name) {
                 selectedRecipe = data.recipes[i];
                 break; 
             }
         }
-    
+        console.log(selectedRecipe);
         if(selectedRecipe) {
-            console.log("Recipe found:", recipeFound);
-            $("#recipe").show();
+            console.log("Recipe found:", selectedRecipe);
+            if($('#errormessage').length) {
+                console.log("error message found");
+                $('#errormessage').remove();
+            }
+
+            console.log( $("#recipe").children());
+            $("#recipe").show();         
+            $("#recipe").children().show();
     
             //html part
-            document.getElementById("name").innerHTML = selectedRecipe.name; //update name
+            //document.getElementById("name").innerHTML = selectedRecipe.name; //update name  
+            $('#name').html(selectedRecipe.name);
     
             //update ingredients
-            $("#ingredients").empty();
+            $("#ingredientsList").empty();
             selectedRecipe.ingredients.forEach(ingredient => {
                 const li = $('<li></li>').text(`${ingredient.ingredient}, ${ingredient.quantity}`);
-                $("#ingredients").append(li);
-            })
+                $("#ingredientsList").append(li);
+            }); 
     
             //update instructions
-            $("#instructions").empty();
+            $("#instructionsList").empty();
             selectedRecipe.instructions.forEach(instruction => {
                 const li = $('<li></li>').text(instruction);
-                $("#instructions").append(li);
-            })
+                $("#instructionsList").append(li);
+            }); 
     
             //update serving size
             $("#size").text(selectedRecipe["Serving size"]);
         }
         else {
-            
-            $("#name").text("Recipe was not found.");
-            $("#ingredients").empty();
-            $("#instructions").empty();
-            $("#size").innerHTML(" ");
-            $("#recipe").show();
+            if($('#errormessage').length) {
+                console.log("error message found");
+                $('#errormessage').remove();
+            }
+            $("#recipe").show();  
+            $("#recipe").children().hide();
+            $("#recipe").append("<h1 id='errormessage'>Recipe not found.</h1>");
         }
         
     }
@@ -48,12 +58,13 @@
     const url = "recipes.json";
     $.getJSON(url, function(data){
         $(".foodname").on('click', function() {
-            const recipeName = $(this).text(); //get the clicked recipe' name
+            const recipeName = $(this).text().trim(); //get the clicked recipe' name
+            console.log(recipeName);
             getRecipe(recipeName, data);
-        })
+        });
     });
 
-function showMenu(menuId) {
+    function showMenu(menuId) {
     var menus = document.querySelectorAll('.food-menus'); // Get all menu elements
 
     // Loop through all menu elements
@@ -63,6 +74,10 @@ function showMenu(menuId) {
         } else {
             menu.style.display = 'none'; // Hide other menus
         }
+    });
+
+    $('#feedback').on('click', function() {
+        
     });
 }
 
